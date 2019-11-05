@@ -1,17 +1,1 @@
-Generating public/private rsa key pair.
-Your identification has been saved in /home/vagrant/.ssh/id_rsa.
-Your public key has been saved in /home/vagrant/.ssh/id_rsa.pub.
-The key fingerprint is:
-21:9d:5a:cf:41:0a:9a:a0:3f:12:31:dc:7c:23:cd:42 vagrant@vagrant-ubuntu-trusty-64
-The key's randomart image is:
-+--[ RSA 2048]----+
-|+ =Eo .   .      |
-| = * B o +       |
-|o   * o * .      |
-| o     + + .     |
-|. o   . S o      |
-| . .             |
-|                 |
-|                 |
-|                 |
-+-----------------+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCfuL5621dFodY4S8M7cOfZ98pCdK/aR9C7zDbfZ/OHEUta4rF7nrWvNbAAvAEKnRbnV0CN63AFFLJ4ZsO7JNtDzYD1hfBv/tQaZeN+f7UXQWQN/slMUea+nSd4ihJl9L2aTq1AEyZQ42jYN/kr/c7ehWN/Yvjuh9bAoBmTsxLE8nsyK/ufYxWqTKVFRr0LJPoirjxMEzEOv13mc4z5GrHUZmAvjuNk1D3ZRdamGYrVNFmY418J+88vZ0RXNLrGf9a1dvN18unZLl2fVlXrEsso0Vv5FGDbztWSQ0apwehl1r/GG9mnAvaVTi6WnRzLgczDUU6IRna3CQlW4dwwU3gn vagrant@vagrant-ubuntu-trusty-64

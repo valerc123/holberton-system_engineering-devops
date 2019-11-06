@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script displays numbers from 1 to 100
-# FizzBuzz when the number is a multiple of 3 and 5
-# Fizz when the number is multiple of 3
+# sapaPerra when the number is a multiple of 3 and 5
+# perra when the number is multiple of 3
 # Buzz when the number is a multiple of 5
 # Otherwise, displays the number
 i=0

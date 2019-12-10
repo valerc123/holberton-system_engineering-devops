@@ -1,4 +1,5 @@
-# Change configuration file for that you  you can
+#!/usr/bin/env bash
+# Add new line in configuration file
 file_line { 'Turn off passwd auth':
   ensure => 'present',
   path   => '/etc/ssh/ssh_config',

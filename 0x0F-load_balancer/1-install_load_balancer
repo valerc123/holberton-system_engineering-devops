@@ -1,22 +1,18 @@
 #!/usr/bin/env bash
 # Install and configure HAproxy
 
-sudo apt-get install software-properties-common
-add-apt-repository ppa:vbernat/haproxy-1.6
 sudo apt-get update
-sudo apt-get install haproxy=1.6.\*
-
-# sudo apt-get -y install haproxy
+sudo apt-get install haproxy=1.6.\* -y
 
 echo "frontend firstbalance
         bind *:80
+        mode http
         option forwardfor
         default_backend webservers
 
 backend webservers
         balance roundrobin
         server webserver1 35.196.228.78:80 check
-        server webserver2 35.231.75.201:80 check
-        option httpchk" >> /etc/haproxy/haproxy.cfg
+        server webserver2 35.231.75.201:80 check" >> /etc/haproxy/haproxy.cfg
 
 sudo service haproxy restart

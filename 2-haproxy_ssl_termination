@@ -1,0 +1,2 @@
+#!/bin/bash
+certbot renew --pre-hook "service haproxy stop" --post-hook "service haproxy start"

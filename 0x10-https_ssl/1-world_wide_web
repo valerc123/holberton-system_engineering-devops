@@ -8,13 +8,13 @@ function valid_subdom()
 
 if [ $# -eq 2 ];
 then
-        valid_subdom "$1" "$2"
+        valid_subdom $1 $2
 else
         subdom=('www' 'web-01' 'web-02' 'lb-01')
 
         for i in "${subdom[@]}";
         do
-                valid_subdom "$1" "$i"
+                valid_subdom $1 $i
         done
 fi
 

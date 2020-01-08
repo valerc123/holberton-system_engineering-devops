@@ -3,7 +3,7 @@
 
 function valid_subdom()
 {
-        dig "$2.$1" | grep -A1 "ANSWER SECTION:" | awk -v subdom="$2" 'FNR==2 {print "The subdomain " subdom " is a " $4 " record and points to " $5}'
+        dig $2.$1 | grep -A1 "ANSWER SECTION:" | awk -v subdom="$2" 'FNR==2 {print "The subdomain " subdom " is a " $4 " record and points to " $5}'
 }
 
 if [ $# -eq 2 ];

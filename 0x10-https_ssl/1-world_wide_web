@@ -12,7 +12,7 @@ then
 else
         subdom=('www' 'web-01' 'web-02' 'lb-01')
 
-        for i in "${subdom[@]}";
+        for i in "${subdom[@]}"
         do
                 valid_subdom $1 $i
         done

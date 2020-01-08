@@ -36,7 +36,7 @@ defaults
 
 frontend firstbalance
         bind *:80
-        bind *:443 ssl crt /etc/haproxy/ssl/valvr.tech.pem
+        bind *:443 ssl crt /etc/haproxy/ssl/www.valvr.tech.pem
         mode http
         default_backend webservers
 
@@ -44,4 +44,3 @@ backend webservers
         balance roundrobin
         server webserver1 35.196.228.78:80 check
         server webserver2 35.231.75.201:80 check
-

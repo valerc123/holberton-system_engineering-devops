@@ -10,7 +10,7 @@ if [ $# -eq 2 ];
 then
         valid_subdom $1 $2
 else
-        subdom=('www' 'web-01' 'web-02' 'lb-01')
+        subdom=('www' 'lb-01' 'web-01' 'web-02')
 
         for i in "${subdom[@]}";
         do

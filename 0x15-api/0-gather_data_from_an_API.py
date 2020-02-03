@@ -1,20 +1,25 @@
 #!/usr/bin/python3
 
 """
+    Consume data from an api
 """
-
-import requests
+from requests import get
 from sys import argv
+import json
 
 if __name__ == "__main__":
 
     employee_id = argv[1]
-    res = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(employee_id))
-    employee_name = res.name
-    print(res.text)
-    print('Name: {}'.format(employee_name))
-    #for r in res:
-    #    EMPLOYEE_NAME = r.name
-    #    print(EMPLOYEE_NAME)
-         #   NUMBER_OF_DONE_TASKS
-        #print("Employee {EMPLOYEE_NAME} is done with tasks({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):")
+    url = 'https://jsonplaceholder.typicode.com/'
+    user = get('{}users/{}'.format(url, employee_id)).json()
+    employee_name = user['name']
+    todo = get('{}todos/'.format(url)).json()
+    total_task = len(todo)
+    task_complete = get('{}todos?userId={}&&completed=true'
+                        .format(url, argv[1])).json()
+    num_task_done = len(task_complete)
+    print("Employee {} is done with tasks({}/{}):"
+          .format(employee_name, num_task_done, total_task))
+
+    for t in task_complete:
+        print(' \t{}'.format(t['title']))

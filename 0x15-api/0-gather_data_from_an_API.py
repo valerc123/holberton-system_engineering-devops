@@ -2,7 +2,6 @@
 """
     Consume data from an api
 """
-import json
 from requests import get
 from sys import argv
 
@@ -12,7 +11,7 @@ if __name__ == "__main__":
     url = 'https://jsonplaceholder.typicode.com/'
     user = get('{}users/{}'.format(url, employee_id)).json()
     employee_name = user['name']
-    todo = get('{}todos/'.format(url)).json()
+    todo = get('{}todos?userId={}'.format(url, argv[1])).json()
     total_task = len(todo)
     task_complete = get('{}todos?userId={}&&completed=true'
                         .format(url, employee_id)).json()

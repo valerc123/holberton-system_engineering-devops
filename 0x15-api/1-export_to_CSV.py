@@ -15,10 +15,9 @@ if __name__ == "__main__":
     # Export data to CSV
     file_csv = "{}.csv".format(argv[1])
     with open(file_csv, "w") as csvfile:
-        f = csv.writer(csvfile, delimiter=",", quoting=csv.QUOTE_ALL)
+        f = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for row in todo:
-            if row['userId'] == argv[1]:
-                f.writerow([row.get('id'), user['username'], todo['completed'], todo['title']])
-
-
-
+            f.writerow([user['id'],
+                        user['username'],
+                        row['completed'],
+                        row['title']])

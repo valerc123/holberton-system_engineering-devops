@@ -18,7 +18,7 @@ if __name__ == "__main__":
         f = csv.writer(csvfile, delimiter=",", quoting=csv.QUOTE_ALL)
         for row in todo:
             if row['userId'] == argv[1]:
-        f.writerow([row['userId'], user['name'], todo['completed'], todo['title']])
+                f.writerow([row.get('id'), user['username'], todo['completed'], todo['title']])
 
 
 
